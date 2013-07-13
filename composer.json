@@ -1,0 +1,21 @@
+{
+    "name": "bramdevries/guildwars2",
+    "description": "A Guild Wars 2 API implementation.",
+    "keywords": ["guild wars", "guild wars 2", "api"],
+    "homepage": "http://github.com/Seldaek/monolog",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bram Devries",
+            "email": "bram_devries@2to1.be",
+            "homepage": "http://2to1.be"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {"GuildWars2": "src/"}
+    }
+}
