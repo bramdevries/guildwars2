@@ -17,8 +17,9 @@ class GuildWars2{
 	protected $language = "en";
 	protected $supported_languages = array("en", "es", "fr", "de");
 
-	public function __construct($options){
-		$this->setLanguage($options['language']);
+	public function __construct($options = array()){
+		if(!empty($options['language']))
+			$this->setLanguage($options['language']);
 	}
 
 	/**
@@ -84,6 +85,39 @@ class GuildWars2{
 
 	public function objectives(){
 		return $this->get('wvw/objective_names');
+	}
+
+	/**
+	* Items & Recipes: API methods that return data about items and recipes
+	*/
+
+	public function items(){
+		return $this->get('items');
+	}
+
+	public function item($id){
+		return $this->get('item_details', "&item_id=" . $id);
+	}
+
+	public function recipes(){
+		return $this->get('recipes');
+	}
+
+	public function recipe($id){
+		return $this->get('recipe_details', "&recipe_id=" . $id);
+	}
+
+	/**
+	* Guilds: API methods that return data about guilds
+	*/
+
+	public function guildByName($name){
+		$name = str_replace(" ", "%20", $name);
+		return $this->get('guild_details', "&guild_name=" . $name);
+	}
+
+	public function guildById($id){
+		return $this->get('guild_details', "&guild_id=" . $id);
 	}
 
 	/**

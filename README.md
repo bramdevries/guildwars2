@@ -7,6 +7,10 @@
 	use GuildWars2\GuildWars2;
 	$gw2 = new GuildWars2(); // Create an instance of the wrapper
 	
+	$gw2 = new GuildWars2(array(
+		"language" => "fr"  // Create an instance of the wrapper, returning data in french
+	));
+	
 ### Static data
 	
 	$gw2->mapNames(); // Returns a list of all currently available areas.
@@ -63,6 +67,13 @@ Get's detailed information (location, name, level) of all events.
 	$gw2->match("2-9") // Returns information about a match (score, keeps)
 	$gw2->objectives() // Returns all objectives 
 
+### Items & Recipes
+	$gw2->items(); // Returns a list of all items discovered by players in the game
+	$gw2->item(12546) // Returns information about an item
+	
+	$gw2->recipes() // Returns a list of all recipes discovered by players in the game.
+	$gw2->recipe(3491) // Returns information about a recipe
+	 
 ## Roadmap
 
 ### V 0.0.1
@@ -70,9 +81,10 @@ Get's detailed information (location, name, level) of all events.
 * Methods for getting the static data (map and world names)
 
 ### V 0.0.2
-* Methods for getting events and WvW and items
+* Methods for getting events, WvW, items, recipes and guilds
 
 ### V 0.0.3
+* Methods for the tile API
 * Add error messages
 
 ### V 0.0.4
