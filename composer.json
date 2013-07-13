@@ -2,7 +2,7 @@
     "name": "bramdevries/guildwars2",
     "description": "A Guild Wars 2 API implementation.",
     "keywords": ["guild wars", "guild wars 2", "api"],
-    "homepage": "http://github.com/Seldaek/monolog",
+    "homepage": "https://github.com/bramdevries/guildwars2",
     "type": "library",
     "license": "MIT",
     "authors": [
