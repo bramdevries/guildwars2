@@ -69,26 +69,24 @@ Get's detailed information (location, name, level) of all events.
 
 ### Items & Recipes
 	$gw2->items(); // Returns a list of all items discovered by players in the game
-	$gw2->item(12546) // Returns information about an item
+	$gw2->item(12546) // Returns information about an item.
 	
 	$gw2->recipes() // Returns a list of all recipes discovered by players in the game.
-	$gw2->recipe(3491) // Returns information about a recipe
+	$gw2->recipe(3491) // Returns information about a recipe.
+	
+### Guilds
+
+	$gw2->guildByName("The Karma Initiative")	// Returns info about a guild.
 	 
-## Roadmap
-
-### V 0.0.1
-* Basic logic for GET requests.
-* Methods for getting the static data (map and world names)
-
-### V 0.0.2
-* Methods for getting events, WvW, items, recipes and guilds
+## Changelog
 
 ### V 0.0.3
-* Methods for the tile API
-* Add error messages
+* Added methods for getting events, WvW, items, recipes and guilds
 
-### V 0.0.4
-* Add Caching
+### V 0.0.2
+* Added basic logic for GET requests.
+* Added methods for getting the static data (map and world names)
 
-### V 1.0.0
-* Methods for all endpoints that exist at Saturday 13th July 2013.
+## Roadmap
+* Provide methods for tile api
+* Cache static data like worldNames.
