@@ -1,6 +1,6 @@
 <?php
 
-namespace GuildWars2
+namespace GuildWars2;
 
 class GuildWars2{
 	public function __construct(){
