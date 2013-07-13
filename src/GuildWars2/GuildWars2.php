@@ -61,13 +61,29 @@ class GuildWars2{
 		return $this->get('events', $param_string);
 	}
 
-	public function event($id){
+	public function event($id = ""){
 
 		$param_string = "";
 		if($id)
 			$param_string = "&event_id=" . $id;
 
 		return $this->get('event_details', $param_string);
+	}
+
+	/**
+	* WvW: API methods that return data about World vs World
+	*/
+
+	public function matches(){
+		return $this->get("wvw/matches");
+	}
+
+	public function match($id){
+		return $this->get('wvw/match_details', "&match_id=" . $id);
+	}
+
+	public function objectives(){
+		return $this->get('wvw/objective_names');
 	}
 
 	/**

@@ -57,7 +57,11 @@ Get's detailed information (location, name, level) of all events.
 	
 	$gw2->event("EED8A79F-B374-4AE6-BA6F-B7B98D9D7142") // One event
 
+### World vs World
 
+	$gw2->matches(); // Returns all current matches.
+	$gw2->match("2-9") // Returns information about a match (score, keeps)
+	$gw2->objectives() // Returns all objectives 
 
 ## Roadmap
 
@@ -66,11 +70,13 @@ Get's detailed information (location, name, level) of all events.
 * Methods for getting the static data (map and world names)
 
 ### V 0.0.2
-* Methods for getting events
+* Methods for getting events and WvW and items
 
 ### V 0.0.3
 * Add error messages
 
+### V 0.0.4
+* Add Caching
 
 ### V 1.0.0
 * Methods for all endpoints that exist at Saturday 13th July 2013.
